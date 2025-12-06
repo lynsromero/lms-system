@@ -11,15 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('courses', function (Blueprint $table) {
+        Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('image');
-            $table->decimal('price', total: 8, places: 2);
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('email')->unique();
+            $table->date('dob');
+            $table->string('password');
             $table->integer('category_id');
             $table->integer('sub_category_id');
-            $table->integer('duration');
-            $table->longText('description');
+            $table->integer('teacher_id');
+            $table->enum('payment_sys' , ['one_time' , 'monthly '])->default('one_time');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('courses');
+        Schema::dropIfExists('students');
     }
 };

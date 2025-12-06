@@ -25,6 +25,7 @@ class CourseSeeder extends Seeder
                 'description' => 'This is a sample description for Course ' . $i,
                 'category_id' => mt_rand(1, 5),
                 'sub_category_id' => mt_rand(1, 10),
+                'duration' => mt_rand(100, 365),
             ]);
         }
     }

@@ -113,7 +113,7 @@
                 <div class="pull-left">
                   <ul class="list-inline">
                     <li><a href="#"><i class="fa fa-user"></i> 21</a></li>
-                    <li><a href="#"><i class="fa fa-clock-o"></i> 15 Min.</a></li>
+                    <li><a href="#"><i class="fa fa-clock-o"></i> {{ $course->duration }} Days.</a></li>
                   </ul>
                 </div><!-- end left -->
 
