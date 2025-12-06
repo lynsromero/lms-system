@@ -14,4 +14,7 @@ class Courses extends Model
     'category_id',
     'sub_category_id',
    ];
+
+
+   
 }
